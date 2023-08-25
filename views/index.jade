@@ -1,0 +1,20 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='../styles.css')
+
+block content
+  .login-container
+    .login-header
+      h1 Demo Login
+
+    form(method='POST' class='login-form')
+      .form-group
+        label(for='email') Email
+        input#email.form-control(name='email' required value='test@example.com' placeholder='Enter your email')
+
+      .form-group
+        label(for='password') Password
+        input#password.form-control(name='password' type='password' required value='123456' placeholder='Enter your password')
+
+      button.btn.btn-primary(type='submit') Login
